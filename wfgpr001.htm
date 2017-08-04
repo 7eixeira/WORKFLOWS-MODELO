@@ -1,0 +1,435 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>BOSSWARE</title>
+
+
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin:0; padding:0;}
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset,img{ border:0;}
+address,caption,cite,code,dfn,th,var{ font-style:normal; font-weight:normal;}
+ol,ul{ list-style:none;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+q:before,q:after{ content:'';}
+abbr,acronym{ border:0;}
+
+html {
+	overflow:-moz-scrollbars-vertical;
+}
+body{
+	background:#eee;
+	color:#333;
+	font-family:Arial,sans-serif;
+	font-size:10px;
+	line-height:16px;
+	text-shadow:0 1px 0 #fff;
+
+}
+
+a{
+	color:#333;
+	text-decoration:underline;
+}
+form{
+	background:#f7f7f7;
+	background:-moz-linear-gradient(90deg, #ccc, #fff); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc)); /* Webkit */
+	border:1px solid #aaa;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-box-shadow:0 0 15px #aaa;
+	-webkit-box-shadow:0 0 15px #aaa;
+	margin:60px auto 0;
+	padding:20px;
+	width:900px;
+}
+h1{
+	border-bottom:1px solid #ccc;
+	font-size:11px;
+	font-weight:bold;
+	letter-spacing:2px;
+	margin-bottom:20px;
+	text-transform:uppercase;
+}
+
+h3{
+
+border-bottom:1px solid #ccc;
+font-size:18px;
+font-weight:bold;
+letter-spacing:-1px;
+margin-bottom:20px;
+text-transform:uppercase;
+
+padding:20px;
+color:#fff;
+text-shadow:2px 4px 9px #000000;
+
+}
+
+h4{
+font-family:Arial,sans-serif;
+font-size:14px;
+color: #000;
+text-shadow:2px 2px 2px #333333
+letter-spacing: 5px;
+}
+
+form p{
+	margin-bottom:20px;
+}
+form p:last-child{ /* Sélecteur avancé pour sélectionner le dernier paragraphe du formulaire */
+	margin-bottom:0;
+}
+label{
+	cursor:pointer;
+	display:block;
+	float:left;
+	font-size:13px;
+	font-weight:bold;
+	line-height:28px;
+	margin-bottom:5px;
+	width:120px;
+}
+form p:hover label{
+	color:#0459b7;
+}
+form p:hover label:after{
+	content:" »";
+}
+input[type=text],
+input[type=password]{
+	background: rgba(255, 255, 255, 0.9);
+	background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+	border:1px solid #aaa;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-box-shadow:0 0 3px #aaa;
+	-webkit-box-shadow:0 0 3px #aaa;
+	padding:5px;
+}
+input[type=text]:focus,
+input[type=password]:focus{
+	border-color:#093c75;
+	-moz-box-shadow:0 0 3px #0459b7;
+	-webkit-box-shadow:0 0 3px #0459b7;
+	outline:none; /* Pour enlever le contour jaune lorsque l'on sélectionne un input dans Chrome */
+}
+select{
+	cursor:pointer;
+	padding:3px;
+	-moz-box-shadow:0 0 3px #aaa;
+	-webkit-box-shadow:0 0 3px #aaa;
+}
+select:active,
+select:focus{
+	border:1px solid #093c75;
+	-moz-box-shadow:0 0 3px #0459b7;
+	-webkit-box-shadow:0 0 3px #0459b7;
+	outline:none;
+}
+input[type=submit],
+a.submit{
+	background:#ddd;
+	background:-moz-linear-gradient(90deg, #0459b7, #08adff); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#08adff), to(#0459b7)); /* Webkit */
+	border:1px solid #093c75;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-box-shadow:0 1px 0 #fff;
+	-webkit-box-shadow:0 1px 0 #fff;
+	color:#fff;
+	cursor:pointer;
+	font-family:Arial,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	margin-left:3px;
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0 1px 1px #333;
+	text-transform:uppercase;
+}
+input[type=submit]:hover,
+a.submit:hover{
+	background:#eee;
+	background:-moz-linear-gradient(90deg, #067cd3, #0bcdff);
+	background:-webkit-gradient(linear, left top, left bottom, from(#0bcdff), to(#067cd3));
+	border-color:#093c75;
+	text-decoration:none;
+}
+input[type=submit]:active,
+input[type=submit]:focus,
+a.submit:active,
+a.submit:focus{
+	background:#ccc;
+	background:-moz-linear-gradient(90deg, #0bcdff, #067cd3);
+	background:-webkit-gradient(linear, left top, left bottom, from(#067cd3), to(#0bcdff));
+	border-color:#093c75;
+	outline:none;
+}
+
+input[type=reset],
+a.reset{
+	background:#ddd;
+	background:-moz-linear-gradient(90deg, #0459b7, #08adff); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#08adff), to(#0459b7)); /* Webkit */
+	border:1px solid #093c75;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-box-shadow:0 1px 0 #fff;
+	-webkit-box-shadow:0 1px 0 #fff;
+	color:#fff;
+	cursor:pointer;
+	font-family:Arial,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	margin-left:30px;
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0 1px 1px #333;
+	text-transform:uppercase;
+}
+input[type=reset]:hover,
+a.reset:hover{
+	background:#eee;
+	background:-moz-linear-gradient(90deg, #067cd3, #0bcdff);
+	background:-webkit-gradient(linear, left top, left bottom, from(#0bcdff), to(#067cd3));
+	border-color:#093c75;
+	text-decoration:none;
+}
+input[type=reset]:active,
+input[type=reset]:focus,
+a.reset:active,
+a.reset:focus{
+	background:#ccc;
+	background:-moz-linear-gradient(90deg, #0bcdff, #067cd3);
+	background:-webkit-gradient(linear, left top, left bottom, from(#067cd3), to(#0bcdff));
+	border-color:#093c75;
+	outline:none;
+}
+
+#options{
+	margin-bottom:20px;
+}
+#options p{
+	display:none;
+}
+#options .show{
+	display:block;
+}
+#options:target .show{
+	display:none;
+}
+#options .hide{
+	display:none;
+}
+#options:target .hide{
+	display:block;
+}
+#options:target p{
+	display:block;
+}
+#finish{
+	background:rgba(65, 166, 42, 0.2);
+	border:2px solid #41a62a;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	display:none;
+	padding:5px 10px;
+}
+#finish:target{
+	display:block;
+}
+#credits{
+	font-size:11px;
+	margin-top:20px;
+	text-align:center;
+}
+#texto{
+	font-size:11px;
+	margin-top:20px;
+	text-align:center;
+	line-height:50%;
+}
+</style>
+</head>
+<body>
+<p style="left:10px; position:absolute; top:10px;"></p>
+
+
+
+
+<form action="WFHTTPRET.APL" method="POST"  name="Form1" id="start" >
+
+
+	<h3> WorkFlow </h3>
+	 <p> </p>
+	<h1> BOSSWARE </h1>
+
+
+	<table align="left" border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
+      <tbody>
+        <tr>
+          <td><strong> EMPRESA</strong></td>
+          <td><strong> &nbsp;SOLICITA&Ccedil;&Atilde;O</strong></td>
+          <td><strong> &nbsp;SOLICITANTE</strong></td>
+          <td><strong> &nbsp;EMISS&Atilde;O</strong></td>
+		  <td><strong> &nbsp;APROVADOR </strong></td>
+        </tr>
+        <tr>
+          <td>%cEmpS% </td>
+          <td>&nbsp;%cNUM% </td>
+          <td>&nbsp;%cSOLICIT% </td>
+          <td>&nbsp;%cEMISSAO% </td>
+		  <td>&nbsp;%CNOMAPROV% </td>
+        </tr>
+        <tr>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+		  <td>&nbsp; </td>
+        </tr>
+      </tbody>
+    </table>
+	<p></p>
+	<br />
+    <p>
+      <label for="name"></label>
+    </p>
+    <p>
+      <label for="password"></label>
+    </p>
+    <p>&nbsp;</p>
+    </p>
+    <table border="0" align="left" cellpadding="1" cellspacing="1" style="width: 1000px;">
+      <tbody>
+        <tr>
+          <td> <strong>ITEM</strong></td>
+          <td> <strong>PRODUTO</strong></td>
+          <td> <strong>QUANT</strong></td>
+          <td> <strong>UNID.MEDIDA</strong></td>
+          <td> <strong>ENTREGA</strong></td>
+          <td> <strong>CENTRO DE CUSTO</strong></td>
+          <td> <strong>OBS</strong></td>
+        </tr>
+        <tr>
+          <td width="3%">%it.ITEM%</td>
+          <td width="20%">%it.PRODUTO% - %it.DESCRI%</td>
+          <td width="2%">%it.QUANT%</td>
+          <td width="2%">%it.UM%</td>
+          <td width="2%">%it.DATPRF%</td>
+          <td width="10%">%it.CC%</td>
+          <td width="20%">%it.OBS%</td>
+        </tr>
+        <tr>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+          <td>&nbsp; </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  <p>
+
+
+
+
+  </p>
+
+	</div>
+	<!-- Bouton de soumission habituel. Je l'ai commenté pour pouvoir afficher ma div "finish" avec la pseudo-classe :target -->
+	<!--p>
+		<input type="submit" value="Confirmar" /> ou <a href="#form"></a>
+
+	</p-->
+	<br>
+
+
+	<p>&nbsp;
+	</p>
+
+
+    <table width="1001" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="15%" height="21"><strong>APROVA SOLICITA&Ccedil;&Atilde;O</strong></td>
+                <td width="85%"><span class="style11">
+                  <input type="radio" checked
+            name="Aprovacao" value="%cAPROV%L">
+Sim. </font></span></td>
+              </tr>
+              <tr>
+                <td height="18">&nbsp;</td>
+                <td><span class="style10">
+                  <input type="radio" name="Aprovacao"
+            value="%cAPROV%R">
+                Não. ( * Favor especificar motivo)</font></span></td>
+              </tr>
+              <tr><td>
+		 <input name="hiddenField2" type="hidden" value="%diasA%">
+                <input name="hiddenField2" type="hidden" value="%cCODUSR%">
+		<input name="hiddenField2" type="hidden" value="%CNOMAPROV%"></td>
+
+              </tr>
+
+			   <tr>
+                <td colspan="2"><p><strong> <font color="#000000">NOTIFICA&Ccedil;&Atilde;O</font>:</strong></p>
+
+				 </td>
+              </tr>
+
+			  <tr class="texto">
+                <td colspan="2"><p> <font color="#000000">* Esta Solicita&ccedil;&atilde;o
+                    de Compras deve ser <strong>Aprovada / Reprovada</strong> dentro de <strong>%diasE% </strong>dias , ou ser&aacute; automaticamente excluida.<br />
+                * O campo entrega &eacute; uma previs&atilde;o. Se necess&aacute;rio,
+                  dever&aacute; ser confirmada com o departamento de compras.<br />
+                * A aprova&ccedil;&atilde;o/rejei&ccedil;&atilde;o dever&aacute; ser
+                  realizada por completo. Caso seja necess&aacute;rio aprovar/rejeitar
+                  produtos individualmente, esta solicita&ccedil;&atilde;o dever&aacute; ser
+                  negada e os ajustes informado no campo <br />
+&quot;Motivo&quot; para a devida
+                  corre&ccedil;&atilde;o e reenvio por parte do solicitante.</font></p>
+                </td>
+              </tr>
+			  <p>
+              <tr>
+                <td colspan="2"><p>&nbsp;</p>
+                  <p><strong>* CASO A SOLICITA&Ccedil;&Atilde;O
+                  SEJA REJEITDA, ESPECIFIQUE O MOTIVO</strong></p></td>
+              </tr>
+			  </p>
+			    <tr>
+                <td colspan="2"><textarea      name="S1" cols="100" rows="4" class="style9">%cMOTIVO%</textarea>
+</td>
+              </tr>
+
+  </table>
+
+	<p>
+	<br>
+	</p>
+	<table border="0" align="left" cellpadding="1" cellspacing="1" style="width: 100px;">
+      <tbody>
+        <tr>
+          <td width="50">
+		  <input name="B1" type="submit" tabindex="6" value="Confirmar"  >
+		  </td>
+          <td width="50"> <a class="reset">&nbsp;&nbsp;&nbsp;&nbsp;Limpar&nbsp;&nbsp;&nbsp;&nbsp;</a> </td>
+        </tr>
+      </tbody>
+    </table>
+	<p>&nbsp;	  </p>
+</form>
+<p id="credits"><font color="#000000">Copyright Todos os Direitos Reservados </strong>.<br />
+    <a href="http://www.grupopreserveliserve.com.br/">BOSSWARE</a>.</font></p>
+</body>
+</html>
